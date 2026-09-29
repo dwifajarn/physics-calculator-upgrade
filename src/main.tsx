@@ -1,15 +1,10 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
-import { HashRouter } from "react-router-dom"
-import App from "./App"
-import "./index.css"
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./styles/index.css";
 
-// HashRouter is used so the SPA works on GitHub Pages,
-// which cannot rewrite unknown URLs back to index.html.
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <HashRouter>
-      <App />
-    </HashRouter>
-  </React.StrictMode>,
-)
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
